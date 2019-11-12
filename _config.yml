@@ -25,7 +25,7 @@ github_username:  fred-o
 # Permalink
 permalink: /:year/:month/:day/:title/
 
-paginate: 5
+paginate: 10
 
 # Build settings
 markdown: kramdown
