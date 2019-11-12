@@ -1,0 +1,50 @@
+---
+layout: post
+title: "GOTY"
+date: 2013-07-22 17:13
+comments: true
+categories: gaming
+---
+
+I finished [Fire Emblem: Awakening][awakening] yesterday, and let me
+tell you: that is one fine game. My first impulse was starting over and
+playing it again, only with a strict 'no reset' policy (I admit
+[I cheated][coping] a bit here and there the first time
+around). There's also a comprehensive selection of DLC and post-game
+content that will keep me occupied for quite a while.
+
+I love this series, and played the hell out of both
+[Fire Emblem][emblem] and [The Sacred Stones][stones] back in the day
+on my GameBoy Micro. {"These games are perfectly polished
+little pearls."} The animations are silky smooth, the story and
+characterization is surprisingly deep, and the combat system is as
+engaging as it is unforgiving.
+
+Compared to the older games in the series I felt that the story of
+_Awakening_ was a little meh. Not bad, just a bit too generic fantasy
+for my taste. As soon as you heard _Grima, the Fell Dragon_ mentioned
+in the beginning you pretty much knew where the story was
+headed. Granted, there is some very interesting stuff happening before
+that, but overall I wasn't too impressed.
+
+However, gameplay-wise the polish has been taken to a new
+level. Characters will help each others out in combat as long as they
+stand next to each other, so you have to consider who to put
+where. You can also let two characters pair up on the same square,
+which makes them stronger and also provides shelter for weak units
+like healers and fliers when there are bowmen about. Another big thing
+is the abundance of disposable enemies that start popping up a bit
+into the game. This makes levelling up weak characters a lot more
+doable than in earlier games, and you don't have to worry about
+'wasting' XP on characters with a low payoff (i.e. Marcus in
+[Fire Emblem][emblem]).
+
+This was a lot of fun. We'll se what happens when I get my hands on
+[Etrian Odyssey 4][etrian], but right now Fire Emblem is _Game of the
+Year_ for me.
+
+[awakening]:http://en.wikipedia.org/wiki/Fire_emblem_awakening
+[coping]:{% post_url 2013-07-07-fire-emblem-coping-with-loss %}
+[etrian]:http://en.wikipedia.org/wiki/Etrian_Odyssey_IV:_Legends_of_the_Titan
+[stones]:http://en.wikipedia.org/wiki/Fire_Emblem:_The_Sacred_Stones
+[emblem]:http://en.wikipedia.org/wiki/Fire_Emblem_(video_game)

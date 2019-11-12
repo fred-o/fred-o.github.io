@@ -1,0 +1,438 @@
+"Loot" by Fredrik Appelberg. 
+
+The story headline is "A short story about greed."
+The story genre is "Fiction".
+The story creation year is 2013.
+The release number is 1.
+
+
+Include Plurality by Emily Short.
+
+Release along with cover art, a website, an interpreter, the source text, and the introductory booklet, and the library card.
+
+Chapter - Mechanics
+
+Section - Hiding
+
+Hiding relates various things to one thing.
+
+The verb to hide (he hides, they hide, he hid, it is hidden, he is hiding) implies the hiding relation.
+
+Section - Actions
+
+Rule for deciding whether all includes something: it does not.
+
+Section - Score
+
+When play begins: silently try switching score notification off.
+Report switching score notification on: silently try switching score notification off.
+
+To earn a point:
+	increment the score;
+	say "[bracket]Your score has just gone up by one point.[close bracket][line break]";
+	if the score is at least 10:
+		earn the "Point Man" achievement.
+
+A thing can be scored. 
+
+This is the collecting treasures rule:
+	if the noun is not scored:
+		now the noun is scored;
+		earn a point;
+		continue the action.
+		
+The collecting treasures rule is listed last in the report taking rulebook.
+		
+When play begins:
+	repeat with thing running through the list of things carried by the player:
+		now the thing is scored.
+		
+The maximum score is 15.
+		
+Section - Achievements
+
+Achievements is a list of texts that varies. New achievements is a list of texts that varies.
+
+To earn the (name - a text) achievement:
+	add the name to new achievements.
+
+After attacking something breakable for the third time (this is the smashing achievements rule): 
+	earn the "Smash Brother" achievement;
+	continue the action.
+
+To update the achievement list:
+	repeat with name running through new achievements:
+		if the name is not listed in achievements:
+			say "Achievement unlocked: [bold type][name][roman type][line break]";
+			earn a point;
+			add the name to achievements;
+			remove name from new achievements.
+
+Every turn when new achievements is not empty:
+	update the achievement list.
+
+Section - Breaking things
+
+A thing can be breakable. A thing can be broken. Things are usually not broken.
+
+A thing has an object called the broken form. The broken form of a thing is usually nothing.
+
+Check attacking something broken: say "It's already broken." instead.
+Check attacking something not breakable: say "Violence isn't the answer to this one." instead.
+
+Carry out attacking something breakable (called the thing): 
+	if the broken form of the thing is not nothing:
+		now the broken form of the thing is in the location of the thing;
+		now the broken form of the thing is broken;
+		now the thing is off-stage;
+	now the thing is broken.
+
+Carry out attacking something (called the container) hiding something (called the treasure):
+	now the treasure is in the location of the player.
+			
+Report attacking something breakable (called the thing):
+	say "You smash [the thing] [one of]good[or]with extreme prejudice[or]viciously[or]to bits[at random]."
+	
+Report attacking something (called the container) hiding something (called the treasure):
+	say "You smash [the container]. Oooh! Looks like [a treasure] [if the treasure is plural-named]were[otherwise]was[end if] hidden within.";	
+	stop the action.
+	
+The block attacking rule is not listed in the check attacking rules.
+
+Section - tying
+
+Attachment relates various things to each other. The verb to be stuck to implies the attachment relation.
+
+Instead of tying the bandages to something: 
+	try tying the second noun to the bandages.
+
+Before tying something to the bandages:
+	if the noun is stuck to the second noun: 
+		say "[The noun] and [the second noun] are already tied together." instead;
+	otherwise if the bandages are stuck to something (called the other thing):
+		say "I know this is illogical, but in this game you can only the the bandages to one thing at a time, and right now it is already tied to [the other thing]. You'll have to try something else." instead.
+
+Instead of tying something to the bandages:
+	now the noun is stuck to the bandages;
+	say "You tie [the noun] to [the second noun].".
+
+After examining something that is stuck to something:
+	say "[The noun] [is-are] firmly tied to the bandages."
+	
+After printing the name of the bandages when the bandages are stuck to something (called the other thing):
+	if we are taking inventory or looking:
+		say " (firmly tied to [the other thing])";
+		now the other thing is mentioned.
+		
+Untying it from is an action applying to two visible things. Understand "untie [something] from [something]" as untying it from.
+
+Instead of untying the bandages from something:
+	try untying the second noun from the bandages.
+
+Before untying something from the bandages:
+	if the noun is not stuck to the bandages:
+		say "But [the noun] [is-are] not tied to the bandages." instead.
+
+Instead of untying something from the bandages:
+	now the noun is not stuck to the bandages;
+	say "You untie [the noun] from the bandages."
+	
+
+Section - Throwing
+
+Instead of throwing something at the hole: say "You're pretty sure you could throw [the noun] through the hole in the ceiling, but what would be the point?"
+
+Instead of throwing something that is stuck to the bandages at the hole:
+	if the noun is the bones or the noun is the scepter:
+		say "You hurl [the noun] through the hole in the ceiling, and there is a faint rattling sound from the outside as it hits the ground. A good length of [the bandages] are left hanging from [the hole], reaching all the way down to [the floor].";
+		now the noun is off-stage;
+		now the bandages are in the crypt;
+		now the bandages are hanging from the ceiling;
+		now the initial appearance of the bandages are "A length of mummy bandages are hanging from the hole in the ceiling, reaching all the way down to the floor.";
+	otherwise:
+		continue the action.
+
+Section - Removing it with
+
+Understand "remove [something] with [something preferably held]" as removing it with.
+
+Check removing it with when the player is not carrying the second noun: say "You don't have [the second noun]." instead.
+
+Report removing it with: say "And what would that accomplish, exactly?" instead.
+
+Removing it with is an action applying to two visible things.
+
+Section - Body parts
+
+The eyes are a plural-named openable container. The eyes are part of the player. The description is "You've had them for as long as you can remember." Understand "eye" as the eyes.
+
+Instead of inserting something into the eyes: say "It's all fun and games until someone loses an eye." instead.
+Instead of dropping the eyes: say "No. You need those to see."
+
+Report closing the eyes: say "You close your eyes." instead.
+Report opening the eyes: say "You open your eyes." instead.
+
+Before doing something when the eyes are closed: 
+	if the current action is opening the eyes or touching the crack: 
+		continue the action;
+	otherwise:
+		try opening the eyes.
+
+Section - Scenes
+
+When play begins: say "You find yourself in an ancient Incan tomb. Or should that be Mayan? To be honest, you've never really been able to tell the difference. One thing you are sure of though, is that this place is a treasure trove of epic proportions."
+
+Chapter - The Crypt
+
+The Crypt is down from Topside. "Shadows loom in this ancient burial chamber, the only light sources being a [beam of sunlight] from above and [the lamp][if the lamp is on the ledge] sitting on [a ledge][else if the lamp is carried by the player] in your hand[end if]." It is dark.
+
+Rule for printing the description of a dark room:
+	say "Shadows loom in this ancient burial chamber, the only light source being the [beam of sunlight] shining down from the opening far above you." instead.
+
+Things can be obvious. Things are usually not obvious.
+
+Visibility rule when doing something to something worn or carried: there is sufficient light. 
+
+Visibility rule when doing something to something obvious: there is sufficient light;
+
+After deciding the scope of the player:
+	repeat with item running through obvious things in the location:
+		place the item in scope.
+	
+Instead of dropping something in a dark room: say "Better be careful not to lose anything in the darkness."
+	
+Rule for printing a refusal to act in the dark:
+	say "It's too dark here." instead.
+
+Section - The fedora
+
+The player is wearing your trusty fedora. The fedora is a container. Understand "hat" as the fedora.
+
+Check inserting something into the fedora when the player is wearing the fedora: try taking off the fedora.
+	
+Check wearing the fedora when something is in the fedora: say "You'd better empty the fedora first." instead.
+
+Report inserting the lamp into the fedora: say "You use the fedora to shield the lamp from the gusts of wind." instead.
+
+Section - Other props
+
+The player is carrying a lighter.
+
+The player is carrying a device called a kerosene lamp. "It's an old-fashioned kerosene lamp that you lug around on your travels." The lamp is unlit. 
+
+Instead of opening the lamp: say "No need for that."
+
+Section - Light
+
+Check switching on the lamp when the player is not carrying the lighter: say "With what?" instead.
+
+Check switching on the lamp when the lamp is not in the fedora: say "You try lighting the lamp with the lighter, but the flame is extinguished by a sudden gust of wind." instead.
+
+Carry out switching on the lamp: 
+	now the lamp is lit;
+	earn the "Light my fire" achievement;
+	now the lamp is on the ledge.
+
+Report switching on the lamp: say "There's definitely an unexpected draught in this crypt, but you shield the lamp with your fedora as best you can. After several false starts you eventually strike up a flame and find a good spot to put the lamp." instead.
+
+Carry out switching off the lamp: now the lamp is unlit.
+
+Instead of burning the lamp: try switching on the lamp instead.
+
+Section - Scenery
+
+The hole is scenery in the crypt. The description is "It is about man-sized and, as far as you can tell, the only way to exit the crypt. [A beam of sunlight] is projected down from the [hole]." Understand "opening" or "exit" as the hole. The hole is obvious.
+
+The beam of sunlight is scenery in the crypt. The description is "[If the lamp is lit]Apart from [the lamp], this[else]This[end if] narrow beam of intense sunlight shining down from [the hole] is the only light in [the crypt]. There is [a curious mark] where it s projected onto [the floor]." The beam is obvious.
+
+The curious mark is obvious scenery in the crypt. The description is "Someone has carved a curious symbol into the floor. It looks like a circle with a wavy line separating it into halves. There are two [small holes], one inside the circle and one outside. on opposite sides of the wavy line. Curious![first time] And what a stroke of luck that you should find it at exactly the time when [the beam] shone on it.[only]"
+
+The floor is scenery in the crypt. The description is "The floor is made up of large stone slabs, and rather uninteresting. However, you spot [a curious mark] exactly where [the sunlight] shines."
+
+The ceiling is scenery in the crypt.
+
+The large stone slab is scenery in the crypt. The description is "[The floor] is made up of huge slabs of rock.[If the grave is in the crypt] One of the slabs has been raised (on what you suppose to be some kind of hidden hinge mechanism), revealing a secret burial place.". Understand "large stone slabs" as the large stone slab. 
+
+Section - The ladder
+
+The rickety ladder is in the crypt. The initial appearance is "[if the ladder is broken]The ladder lies broken on the floor[otherwise]There's a rickety ladder resting against [the hole] in [the ceiling][end if]." The description is "You used it to enter the crypt, [if the ladder is broken]and now you start to wonder how you're ever going to get back out again[otherwise]but seeing it up close makes you wonder if it will actually hold together if you try going back up again. The [wood] looks brittle, and the [nails] are rusty. Some of the [steps] are missing[end if]." The ladder is obvious.
+
+The wood is part of the ladder. The description is "It looks ancient and fragile.[if the ladder is not broken] Will it support your weight when you're loaded with treasure?[end if]"
+
+The rusty pair of nails are part of the ladder. The description is "[if the ladder is broken]These two moderately rusty nails are the only ones who survived your demolition of the ladder[otherwise]The ladder is being kept together by huge, hand-crafted iron nails. Most of the are rusted through, but a few still seem OK[end if]." Understand "rusty/iron/nail" as nails.
+
+Instead of taking the rusty nails when the ladder is not broken:
+	say "You attempt to pull [the rusty nails] out of [the ladder] using only your hands. Net result: nails still stuck, fingers aching."
+	
+Instead of pulling the rusty nails when the ladder is not broken: try taking the rusty nails.
+
+Instead of removing the rusty pair of nails with the scepter when the player is carrying the scepter:
+	if the ladder is broken:
+		say "You've already extracted the nails from the ladder.";
+	otherwise:
+		say "Using the scepter as a crowbar, you pry the rusty nails from the ladder. Most of them break under the stress, but when you're done you at least have two fine, moderatly rusty nails. Oh, and you've also totally demolished the ladder.";
+		now the ladder is broken;
+		now the player is carrying the rusty pair of nails.
+
+The steps are part of the ladder. The description is "Only a few steps remain intact."
+
+Instead of taking the ladder: say "The ladder is way to unwieldy for you to carry around. Also, you might accidentally break it if you were to try moving it."
+
+Instead of attacking the ladder: say "And how are you then planning to return to the surface world?"
+
+Section - The curious mark
+
+Instead of touching the curious mark: say "You run your fingers along the groves of [the curious mark]. Buried deep inside the two small holes there seem to some kind of [buttons], but you fingers are just too large to reach them." Understand "grove/groves/circle" as the curious mark.
+
+The small holes are scenery in the crypt. The description is "The holes are deeper than they look. Squinting to see in the bad light, you can make out some kind of button mechanism at the bottom of each hole."
+
+The buttons are scenery in the crypt. Understand "button" as the buttons. Instead of examining the buttons: try examining the small holes.
+
+Instead of pushing the buttons: try touching the curious mark. 
+	
+Instead of inserting the rusty pair of nails into the small holes when the player is carrying the rusty pair of nails:
+	if the grave is in the crypt:
+		say "Nothing happens.";
+	otherwise:
+		say "There is a loud 'Click!' from the floor. Suddenly one of the large stone slabs swing open, revealing [a grave].";
+		now the grave is in the crypt.
+
+Section - The ledge
+
+The ledge is an undescribed fixed in place supporter in the crypt. The description is "One of several stone ledges spanning the walls.[first time] Hidden away in the shadows at the end of [the ledge] you can make out what appears to be [a headband].[only]" 
+
+
+Section - The urns
+
+The large urn is in the crypt. The description is "It's a large, ancient, probably priceless urn. You would have to be mad to break it." It is breakable. The broken form is the pile of broken pottery. After attacking the large urn: now the broken pottery is hiding the scarab; continue the action. 
+
+Instead of searching the large urn: say "The large urn has been sealed tight. [if the player is carrying the large urn]You can hear something rattling around inside, though.[end if]"; Instead of opening the large urn: try searching the large urn.
+
+The medium-sized urn is in the crypt. The description is "It's a medium-sized, ancient, probably priceless urn. It'd be a crime against archeology to break it." It is breakable. The broken form is the pile of broken pottery. The medium-sized urn is hiding some bones. Understand "medium urn" as medium-sized urn. 
+
+Instead of searching the medium-sized urn: say "The medium-sized urn has been sealed tight. [if the player is carrying the large urn]It feels like there's something inside it, though.[end if]"; Instead of opening the medium-sized urn: try searching the medium-sized urn.
+
+The small urn is in the crypt. The description is "It's a small, ancient, probably priceless urn. Only a madman would even think about breaking this fragile thing." It is breakable. The broken form is the pile of pottery. The small urn is hiding the even smaller urn. 
+
+Instead of searching the small urn: say "The small urn has been sealed tight[if the player is carrying the small urn], but you're almost certain that it contains something of importance[end if]."; Instead of opening the small urn: try searching the small urn.
+
+The even smaller urn is a thing. The description is "It's a very diminutive urn you've got there. Wonder what's inside?" It is breakable. The broken form is the pile of broken pottery.
+
+Instead of searching the even smaller urn: say "The even smaller urn has been sealed tight."; Instead of opening the even smaller urn: try searching the even smaller urn.
+
+Report attacking the even smaller urn: say "Bam! You smash the urn to pieces, but it looks like it was empty after all. Pity."; stop the action.
+
+Section - The pottery
+
+The a pile of broken pottery is a thing. The printed name is "a pile of broken pottery". The description is "The ancient urn has been reduced a small heap of broken pottery. You sure showed who's boss." 
+
+Instead of taking the pottery: try searching the pottery.
+
+Instead of searching the pottery:
+	if the pottery is hiding something:
+		say "You run your hands through the broken pottery. Oh, lookie here! [A list of things hidden by the pottery]!"; 
+		repeat with the treasure running through the list of things hidden by the pottery:
+			now the treasure is in the location of the player;
+			now the treasure is not hidden by the pottery;
+	otherwise:
+		say "You futilely run your hands through the broken pottery."
+
+Section - Treasures
+
+A treasure is a kind of thing.
+
+The indian headband is a treasure on the ledge. The description is "[one of]An incan[or]A mayan[at random] headband, possibly used for burial ceremonies. You really ought to read up on these things; aren't you supposed to be some kind of archaeologist?". It is wearable.
+
+Check wearing the headband when the player is wearing the fedora:
+	try silently taking off the fedora;
+	say "(First taking off the fedora)"
+	
+Check wearing the fedora when the player is wearing the headband:
+	try silently taking off the headband;
+	say "(First taking off the headband)"
+	
+
+The scarab is a treasure. The description is "A scarab found in a ancient South American tomb? You'd have guessed a scarab was more of an Egyptian thing. But hey, loot is loot."
+
+Some bones is a treasure. The description is "The mortal remains of an ancient [one of]incan[or]mayan[at random] guy, you guess. Rather icky to handle, but an important archaeological find, nonetheless." 
+
+The scepter is a treasure in the crypt. The description is "This is actually a pretty impressive piece of ancient [one of]incan[or]mayan[at random] hardware. Back home you would have called it a crowbar, but surely this must be a scepter of some sort. I mean, why else would someone leave it in a crypt like this?" 
+
+The ancient necklace is a wearable treasure. The description is "It has a nice weight to it; you suspect it is solid gold. As soon as you get out of here, this beauty is going straight to a dealer- [italic type]I mean, to a museum. Where it belongs![roman type]"
+
+Section - The grave
+
+The hidden grave is a fixed in place open container. The initial appearance is "Right in the middle of the floor, [a large stone slab] has swung open, revealing a secret burial place.".
+
+The mummy is in the grave. The description is "[if the mummy is wearing the bandages]The mummy is a rather small fellow, wrapped in bandages from top to toe[otherwise]With the bandages off this guy is actually pretty disturbing to look at[end if]." Report taking the mummy for the first time: say "The mummy is surprisingly light, if rather unwieldy to lug around."; rule succeeds.
+
+Carry out taking the mummy for the first time: earn the "Mummy Dearest" achievement.
+
+The mummy is wearing the bandages. The bandages are plural-named. The description is "A long, continuous strip of cotton (or is it linen?) that used to be the burial clothing of that unfortunate fellow you found in the hidden grave chamber. It's surprisingly tough for being so old."
+
+The bandages can be hanging from the ceiling.
+
+Check taking the bandages when the bandages are hanging from the ceiling:
+	say "The bandages are stretched taut as you give it an experimental tug. It seems [the list of objects that are stuck to the bandages] has actually hooked into something on the outside, and is totally stuck." instead.
+	
+Instead of pulling the bandages when the bandages are hanging from the ceiling:
+	try taking the bandages.
+	
+The can't remove from people rule is not listed in the check removing it from rulebook.
+The can't take people's possessions rule is not listed in the check taking rulebook.
+The can't take other people rule is not listed in the check taking rulebook.
+
+Section - The draught
+
+The draught is obvious scenery in the crypt. "There seems to be a breeze coming from [a crack]." Understand "breath/whiff/wind/breeze/guff/gust" as draught.
+
+Instead of listening when the player is in the crypt: say "It's all very quiet down here. You'd think you'd be able to hear some dripping water or even some of the jungle sounds from outside, but no. The only thing you can make out is the faint sound of a draught of wind."
+
+Section - The cache
+
+The crack in the wall is scenery in the crypt. "It's about as wide as your fist. It's too dark for you to make out anything inside."
+
+Instead of searching the crack: say "It's much too dark; you can't make out a thing."
+
+Instead of touching the crack when the eyes are closed: 
+	say "With your eyes closed you tentatively put your hand in the crack, fully expecting a poisonous sting. Nothing happens, though. It must've been you imagination all along![paragraph break]Also, you find something that very much feels like an ancient necklace.";
+	now the necklace is in the crack;
+	try silently taking the necklace;
+	earn a point.
+
+Instead of touching the crack when the necklace has been held: say "You have a thorough rummage around the ol' crack, but can't find anything else in there."
+
+Check touching the crack for the first time: say "You lift your hand towards the crack but you're sure you detect some kind of movement in there. A scorpion perhaps? A snake? Why does it always have to be snakes? You quickly withdraw your hand." instead.
+
+Check touching the crack: say "Again, you lift your hand towards the crack in the wall; again you see something moving in the darkness and lose heart. There is a vile, poisonous thing in there, you're sure of it." instead.
+
+Instead of inserting the lamp into the crack: say "You try holding the lamp up the crack, but it's too narrow and weirldly angled for you to get a good view inside (you're pretty sure there's something waiting in the shadows, though.)"
+
+Instead of inserting something into the crack: say "No. You might lose it." 
+
+Section - Leaving
+
+Check going up from the Crypt:
+	if the bandages are hanging from the ceiling in the crypt:
+		try climbing the bandages instead;
+	if the ladder is in the crypt: 
+		try climbing the ladder instead;
+	otherwise: 
+		say "[The hole] is way up in [the ceiling]. You can't reach it from where you're standing."
+
+Instead of climbing the bandages when the bandages are hanging from the ceiling:
+	say "Taking a deep breath, you start pulling yourself up the thin strip of mummy wrappings. Luckily, it is much stronger than it looks, and soon you're halfway up. Then something breaks up above, there's a sudden rush, and you slide back down a metre or two. Your heart is racing, but it seems like [the list of objects stuck to the bandages] has found purchase again. A tense couple of minutes later, the sun greets you as you emerge from the entrance hole. [paragraph break]Well, you may have ruined the ladder, but [a score-related message]";
+	earn the "Getting Away With it" achievement;
+	update the achievement list;
+	end the game in victory.
+
+Instead of climbing the ladder when the ladder is broken:
+	say "That will be tough, seeing as you've broken the ladder."
+
+Instead of climbing the ladder: 
+	say "The ladder creaks precariously as you begin your ascent. About halfway up one of the remaining steps break as you step on it, and you scramble frantically for purchase. Just as you make your way through the hole in the ceiling the ladder breaks apart and disappears from under you. But [a score-related message]";
+	end the game in victory.
+
+To say a score-related message: say "[if the score is less than 2]you've at least made it back out in one piece[otherwise if the score is less than 3]you at least found that one treasure[otherwise if the score is less than 4]you've at least found a few treasures[otherwise if the score is less than 10]you've at least made it back up with your rucksack full of treasure[otherwise]you cleaned that crypt out pretty good[end if]. [paragraph break]And in the end, that's all that matters.[paragraph break]"
+
+The player is in the crypt.

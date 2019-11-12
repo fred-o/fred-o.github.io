@@ -1,0 +1,197 @@
+---
+layout: post
+title: Aop.js
+categories: [js]
+---
+
+My excursions into the dark recess of my `/js` directory continue.
+This was originally something I wrote a while back when I was learning
+about [Aspect-oriented programming][aop] in Java and wanted see how
+much trouble it would be to write something similar for JavaScript. As
+it turned out, writing the core functions wasn't that complicated at
+all.
+
+``` js
+Aop = {
+  // Apply around advice to all matching functions in the given namespaces
+  around: function(pointcut, advice, namespaces) {
+    // if no namespaces are supplied, use a trick to determine the global ns
+    if (namespaces == undefined || namespaces.length == 0) 
+      namespaces = [ (function(){return this;}).call() ];
+    // loop over all namespaces 
+    for(var i in namespaces) {
+      var ns = namespaces[i];
+      for(var member in ns) {
+        if(typeof ns[member] == 'function' && member.match(pointcut)) {
+          (function(fn, fnName, ns) {
+             // replace the member fn slot with a wrapper which calls
+             // the 'advice' Function
+             ns[fnName] = function() {
+               return advice.call(ns, { fn: fn, 
+                                          fnName: fnName, 
+                                          arguments: arguments });
+             };
+           })(ns[member], member, ns);
+        }
+      }
+    }
+  },
+
+  next: function(f) {
+    return f.fn.apply(this, f.arguments);
+  }
+};
+```
+
+This is basically all there is to it. The `Aop.around()` method takes
+a [pointcut][pointcut] (a regexp pattern), a reference to the [advice]
+(function reference) to be applied and an optional list of namespaces
+(which in this context is just fancy talk for 'JavaScript object'). It
+then loops through all slots in each namespace (defaulting to the
+global object if no namespaces were specified) and replaces any
+functions whose name matches the pointcut pattern with a wrapper
+function.
+
+The `Aop.next()` method is just a convenience: it is used to pass
+control over to the original function.
+
+## Example time
+
+All right, time for an example. Everyone loves examples, right?
+Right. Here's me defining a trivial function in the global namespace:
+
+``` js
+js> function hello(name) { print('hello, ' + name); }
+js> hello('fredrik')
+hello, fredrik
+js> 
+```
+
+By the way, I'm using [rhino][rhino], as I like having a JavaScript
+[REPL][repl] i can run directly from the command line. You should be
+able to embed the script in a web page and run it from the
+[Firebug][firebug] console as well, but you'll have to change
+`print()` to `console.log()`.
+
+ Now, let's apply some around advice to my greeter
+function:
+
+``` js
+js> Aop.around('hello.*', function(f) {
+  > print('[before ' + f.fnName + ']');
+  > Aop.next(f);
+  > print('[after ' + f.fnName + ']');
+  > })
+js> hello('fredrik')
+[before hello]
+hello, fredrik
+[after hello]
+js> 
+```
+
+So, what's happening here? We're telling Aop.js that we want to add a
+wrapper around all functions starting with the name 'hello' in the
+global namespace. Upon function invocation, this wrapper function
+calls the advice function with a map of named parameters such as the
+orignal name of the function being called, a reference to the original
+function and a list of function arguments. What happens then is up to
+the advice function; in this case it just calls the original method
+(using `Aop.next()`), printing out a message before and after the
+call. Not very exciting perhaps, but certainly proof of concept.
+
+But wait, did I just say that the function arguments is passed on to
+the advice function? I sure did. Does that mean that I can manipulate
+them before the original function is called? You bet:
+
+``` js
+js> Aop.around('hello.*', function(f) {
+  > f.arguments[0] = 'world';
+  > Aop.next(f);
+  > })
+js> hello('fredrik')                   
+[before hello]
+hello, world
+[after hello]
+js> 
+```
+
+Naturally, the same goes for return values, only in reverse. The
+advice function is free to pass on whatever the original function
+returns, or return something different if it wants to:
+
+``` js
+js> function plus(a, b) { return a + b; }
+js> plus(2, 2)
+4
+js> Aop.around('plus', function(f) { return Aop.next(f) + 1; })
+js> plus(2, 2)                                                
+5
+js> 
+```
+
+## Before() and after() advice
+
+It is quite easy adding support for before and after advice if we
+define them using `Aop.around()`:
+
+``` js
+Aop.before = function(pointcut, advice, namespaces) {
+  Aop.around(pointcut, 
+             function(f) {
+               advice.apply(this, f.arguments);
+               return Aop.next(f)
+             }, 
+             namespaces);
+};
+
+Aop.after = function(pointcut, advice, namespaces) {
+  Aop.around(pointcut,
+             function(f) {
+               var ret = Aop.next(f);
+               advice.apply(this, f.arguments);
+               return ret;
+             },
+             namespaces);
+};
+```
+
+These are simpler convenience methods that adds an advice function
+that will be called before and after function invocation,
+respectively. In order to make them easy to use, I've chosen to
+simplify the advice functions a bit. Unlike `Aop.around()` they get
+called with the same arguments as the original function (and not with
+a parameter map).
+
+``` js
+js> function hello(name) { print('hello, ' + name); }
+js> Aop.before('hello', function(name) { print('before hello, name=' + name); })
+js> hello('fredrik')
+before hello, name=fredrik
+hello, fredrik
+js> 
+```
+
+Unfortunatly, stripping down the API like this makes certain things
+impossible using `Aop.before()` and `Aop.after()`. You can't inspect
+the name of the current function for example, or manipulate it's
+arguments or return values. But hey, in that case just use
+`Aop.around()` instead. It's simple enough.
+
+## Conclusion
+
+When I rediscovered this script it looked quite different, and as I
+started hacking more on it to write this post I found myself
+refactoring, adding code, and removing. And removing. And
+removing. Now only the really necessary parts remain, and there's a
+certain beauty in that.
+
+My main takeway is that doing [AOP][aop] this way isnt' hard. There's
+nothing revolutionary in my code, just a bit of juggling functions
+calling other functions. But hey, that's the true power of JavaScript.
+
+[rhino]:http://www.mozilla.org/rhino/
+[repl]:http://en.wikipedia.org/wiki/Read-eval-print_loop
+[firebug]:http://getfirebug.com
+[aop]:http://en.wikipedia.org/wiki/Aspect-oriented_programming
+[advice]:http://en.wikipedia.org/wiki/Advice_in_aspect-oriented_programming
+[pointcut]:http://en.wikipedia.org/wiki/Pointcut

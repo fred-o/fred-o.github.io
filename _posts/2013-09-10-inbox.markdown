@@ -1,0 +1,85 @@
+---
+layout: post
+title: "Inbox"
+date: 2013-09-10 21:18
+comments: true
+categories: 
+---
+
+It's funny how things change. I used to hang out on a lot of mailing
+lists back in the day, some pretty high-volume ones. Two that come to
+mind were the [Belle and Sebastian fan list][sinister] and an
+extremely casual chat list for bored young IT professionals. I had my
+email client of choice ([mutt][mutt]) fired up and checked it
+obsessively throughout the day.
+
+I could get hundreds of emails in one day, most of the fairly
+uninteresting. But I read them all none the less. In a way, this was
+social networking before orkut, friendster and facebook.
+
+A couple of years ago things started to shift. I noticed this at first
+when going through the inbox of my new email client of choice
+([gmail][gmail]). Most of my traffic were just notifications about
+interactions happening elsewhere. Someone wants to friend you och
+Facebook. You've got a PM on Twitter. Someone endorsed your XML skills
+on LinkedIn.
+
+(Side note: I _never_ use LinkedIn. The only time I go there is to
+dutifully accept someone's network request, and this happens once every six
+months or so. I suspect I'm not the only one doing this. {"LinkedIn is
+where social interaction goes to die."})
+
+Anyway, I realized that my email inbox was slowly being turned into a
+dumping ground for online services while at the same time most of my
+actual interactions were moving elsewhere. I found it easier to just
+fire off a Facebook or Twitter PM than taking the time to compose an
+email. Which is kind of ironic considering how a decade earlier email
+had killed off regular letter writing in much the same fashion.
+
+What came next was that I started dreading getting email. I still
+haven't figured out the the reason behind this. All I know is that
+opening my inbox filled me with anxiety. The emails I got were mostly
+spam for products I didn't want or sad status notifications from
+services I no longer used. And there were all the mass mailings about
+Good Causes (WSPA, Avaaz, Sea Shepherds); well-intended but very
+depressing. What few actual human interactions I still had got buried
+in this crap. And it made me shy away from the medium that I used to
+love and spend every waking moment on.
+
+When Google rolled out their [recent gmail changes][gmailinbox] that
+split your inbox into separate buckets for the important stuff
+(Primary) and the rest (Social, Promotions, Forums, etc.) and then
+applied their strange cloud powers to create an automatic
+categorization scheme that actually worked, I was delighted. It
+sounded perfect. It felt as if they built this feature just for
+me. The wheat got separated from the chaff and it all worked! Well,
+most of the time anyway.
+
+It's not enough, though. As long as the other buckets fill up with
+messages I'll still feel anxious that I'm missing something. There's a
+compulsion to read them all, even though I know I don't have the
+motivation or capacity to act on them in any meaningful way. I'm still
+unhappy and stressed out.
+
+I've started a new email regimen:
+
+ 1. *Unsubscribe mercilessly.* Unsubscribe from the product updates, the
+    marketing emails, the service notifications. You don't need
+    them. Unsubscribe from mailing lists you haven't read in a while;
+    you can always resubscribe later. Unsubscribe from charity mass
+    mailings; if you really want to contribute there are better ways
+    than sitting at your computer, feeling impotent.
+
+ 2. *Filter what you cannot unsubscribe.* Create rules that
+    automatically mark stuff as read, or send it directly to trash.
+    Train your spamfilter like a rabid pitbull.
+
+ 3. *Delete what you cannot filter.* Seriously. You ain't gonna need it. 
+
+<blockquote class="twitter-tweet"><p>Know what happens when you accidentally delete the last couple year&#39;s worth of email? Nothing. Nothing at all.</p>&mdash; Dr. Rowdy Peppercorn (@RowdyPrimate) <a href="https://twitter.com/RowdyPrimate/statuses/349626068828819458">June 25, 2013</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+[gmail]:http://gmail.com
+[gmailinbox]:http://gmailblog.blogspot.se/2013/05/a-new-inbox-that-puts-you-back-in.html
+[mutt]:http://www.mutt.org
+[sinister]:http://www.missprint.org/sinister/

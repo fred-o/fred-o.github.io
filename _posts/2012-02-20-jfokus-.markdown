@@ -1,0 +1,41 @@
+---
+title: JFokus 2012
+layout: post
+published: true
+categories: [jfokus]
+---
+
+Last week was [JFokus], and a great time
+[was had by all][tweets]. This was the third time for me, and I'm
+really glad they moved the location to Stockholm Waterfront. Last time
+I went, we were crammed into a cinema complex with far too little
+floorspace, no wifi and very limited toilet facilities. This year
+though, the location was great and the surprisingly good coffee kept
+flowing all throughout the three days.
+
+There seemed to be a good deal of interest in [Scala] at the event,
+but I'm not sure this actually reflects some kind of actual change in
+the Java ecosphere. Mostly, it were small, hip, consultancies doing
+the promotion, and I have a gnawing suspicion that they don't have
+much Scala work lined up per se, but are instead using Scala to get
+the attention of potential recruits. Time will tell.
+
+I'm a pretty introverted guy, and don't really feel that comfortable
+around a lot of people. Most of the time during the big breaks I found
+myself wishing for a laptop so that I could get hacking instead of
+having to wander round aimlessly pretending to feel at home in the
+crowd. Fate, however, seated me beside [Chris Richardson][cr] (of
+[Cloud Foundry][foundry] fame) during lunch the first day, and we had
+a pretty good discussion, even though my english was still getting up
+to speed. For some reason I also managed to corner
+[Greg Luck][gl] during the tuesday bar and talk to him about
+[Ehcache]. Both were very nice guys, and I'd like to thank them both
+for helping me come out of my shell a bit.
+
+[JFokus]:http://jfokus.se
+[tweets]:https://twitter.com/#!/search/%23jfokus
+[cr]:http://www.chrisrichardson.net/aboutus.html
+[foundry]:http://cloudfoundry.org
+[gl]:http://gregluck.com/blog/
+[ehcache]:http://ehcache.org
+[scala]:http://www.scala-lang.org/

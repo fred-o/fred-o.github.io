@@ -1,0 +1,106 @@
+---
+layout: post
+title: NoLOG
+---
+
+Java logging is fundamentally broken. This is hard fact, not a point
+of view. Logging is broken, and has been for years.
+
+How is it broken, you ask? Let me count the ways:
+
+* I've had application servers die on me because a logging framework
+  was complaining over something. This shouldn't happen. Ever. 
+* One of our old production servers is running JBoss4 and has been
+  running for five years now. About two years ago Log4J started giving
+  strange error messages that has something to do with class
+  loading. I have no idea if we even changed anything, it just stopped
+  working.
+* We switched to Glassfish after that. Now, glassfish is a terrific
+  app server, but it insists on using the JDK logging
+  facilities. Since we use Log4J internally that means everything gets
+  mangled through `System.out`, then logged with a severity of INFO
+  regardless of the original severity. Glassfish also uses a really
+  ugly multi-line logging format as default. I'd really like to change
+  that if I could only figure out how.
+* Also, we have three Glassfish servers. Two of them write their logs
+  like they're supposed to. On the third machine (identical setup as
+  far as I can tell) it stops logging right after boot. No indication
+  of what's going on, just silence.
+* Speaking of JDK logging, what's up with the logging levels? I dig
+  SEVERE, WARNING, INFO; they're all right. Maybe even CONFIG. But
+  FINE, FINER and FINEST? That's just stupid.
+* And don't get me started about Commons Logging. The problems with
+  this sorry piece of software [is well documented][cl]. 
+* I have never gotten Log4j to work with Jetty, and not for lack of
+  trying.
+* I wanted to deploy [Nexus][nexus] (an otherwise excellent product)
+  to a Glassfish server. Shouldn't be a problem, right? Just a
+  standard WAR in a standard Servlet container, right? Nope, couldn't
+  be done because of serious bugs in the logging code. I now have to
+  run Nexus in its own container on a different port. This is frankly
+  ridiculous. Why should the implementors choice of logging framework
+  dictate what web cointainer I can run?
+
+In short, I have spent way to much time just getting simple logging
+working through the years, and now I've had just about enough. Think
+of the man-hours lost, what we could be doing instead of fiddling with
+`log4j.properties` and `commons-logging.properties`! Why do we put up
+with this?
+
+The basic principles of logging are sound, but it's too late. There
+are simply [too many logging frameworks][wlog] out there, each one
+making the situation a little bit worse. Commons Logging was bad
+enough. Log4J fractured the market, and Sun cemented the situation by
+introducing the badly designed JDK logging package. 
+
+[Logging meta-frameworks][slf4j] isn't really helping the
+situation. The ship has sailed. We don't need *more* frameworks, we
+need less of them. The ideal situation would be exactly *one* logging
+framework (that doesn't suck), that would be the obvious choice for
+most projects. As it stands now all open source projects use a
+different one, each incompatible with each others but offering
+'helpful' and 'seamless' integration that never seems quite to work.
+
+Last time I checked the dependencies for our main webapp at work
+included multiple versions of Log4J, Commons Logging, Slf4J, and
+problably Logback and a few others I've missed as well. Have fun
+working out the classloader issues there!
+
+## An interim solution: WoodChipper
+
+I dreamt this up at work the other day, and this is all purely
+hypothetical, but I do believe someone should make something like this. 
+
+Anyway, *WoodChipper* (or whatever it will be called, I choose the
+name since it is a machine that disintegrates logs) is a java utility
+that goes through all the jar files on your class path and uses
+sophisticated byte code manipulation to replace all references to
+Commons Logging, Log4J, JDK logging, etc. with
+`System.out.println()`. Ideally this could be done at runtime, or as a
+maven plugin.
+
+I know some people would argue it'd better to make it all
+[Slf4J][slf4j] instead, but then you're kind of missing the
+point. I've had enough of logging. I don't want to spend another
+minute configuring a logging framework, and I don't see why I should
+have to. I'm declaring logging bancruptcy.
+
+Writing to `stdout` isn't bad. At least the results can be piped,
+greped and redirected using standard Unix tools.
+
+## Is it time for a NoLOG license?
+
+Today I started thinking that maybe what we need is a new sort of Open
+Source license, kind of like an inverted GPL. It would state that
+you're free to use my code pretty much anyway you like, just as long
+as the finished product does not depend on a logging
+framework. Any transgressions would be punishable by catapult.
+
+Extreme measures, perhaps. But if that's what it takes to get people
+to stop using Commons Logging, it may well be worth it in the end.
+
+[wlog]:http://en.wikipedia.org/wiki/Java_Logging_Frameworks
+[slf4j]:http://slf4j.org
+[cl]:http://articles.qos.ch/thinkAgain.html
+[nih]:http://en.wikipedia.org/wiki/Not_Invented_Here
+[nexus]:http://nexus.sonatype.org/

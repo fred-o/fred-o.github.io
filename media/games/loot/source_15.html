@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Fredrik Appelberg - Loot — 17 of 26</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="author" content="Fredrik Appelberg" />
+  <meta name="description" content="A page for the game Loot by Fredrik Appelberg." />
+  <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+</head>
+
+<body>
+
+<div class = "container">
+
+<div class ="sourcecoverimage">
+	<span><a href="Cover.png"><img src="Small Cover.png" border="1" /></a></span>
+</div>
+
+<div class ="sourceintroduction">
+	<h1>
+		<span>Loot</span> <span class="pagination">— 17 of 26</span>
+	</h1>
+	<h2>
+		<span>Fredrik Appelberg</span>
+	</h2>
+	<div class ="sourcebibliography">
+		<span>Release 1</span>
+	</div>
+</div>
+
+<div class = "links">
+<ul>
+<li><a href="index.html">Home page</a></li><li><a href="source.html">Beginning</a></li><li><a href="source_14.html">Previous</a></li><li><a href="source_16.html">Next</a></li>
+</ul>
+</div>
+
+<div class = "source">
+<p class="indent0"><span class="heading">Section - The ladder</span></p><p class="indent0"></p><p class="indent0">The rickety ladder is in the crypt. The initial appearance is &quot;<span class="quote">[</span><span class="substitution">if the ladder is broken</span><span class="quote">]The ladder lies broken on the floor[</span><span class="substitution">otherwise</span><span class="quote">]There's a rickety ladder resting against [</span><span class="substitution">the hole</span><span class="quote">] in [</span><span class="substitution">the ceiling</span><span class="quote">][</span><span class="substitution">end if</span><span class="quote">].</span>&quot; The description is &quot;<span class="quote">You used it to enter the crypt, [</span><span class="substitution">if the ladder is broken</span><span class="quote">]and now you start to wonder how you're ever going to get back out again[</span><span class="substitution">otherwise</span><span class="quote">]but seeing it up close makes you wonder if it will actually hold together if you try going back up again. The [</span><span class="substitution">wood</span><span class="quote">] looks brittle, and the [</span><span class="substitution">nails</span><span class="quote">] are rusty. Some of the [</span><span class="substitution">steps</span><span class="quote">] are missing[</span><span class="substitution">end if</span><span class="quote">].</span>&quot; The ladder is obvious.</p><p class="indent0"></p><p class="indent0">The wood is part of the ladder. The description is &quot;<span class="quote">It looks ancient and fragile.[</span><span class="substitution">if the ladder is not broken</span><span class="quote">] Will it support your weight when you're loaded with treasure?[</span><span class="substitution">end if</span><span class="quote">]</span>&quot;</p><p class="indent0"></p><p class="indent0">The rusty pair of nails are part of the ladder. The description is &quot;<span class="quote">[</span><span class="substitution">if the ladder is broken</span><span class="quote">]These two moderately rusty nails are the only ones who survived your demolition of the ladder[</span><span class="substitution">otherwise</span><span class="quote">]The ladder is being kept together by huge, hand-crafted iron nails. Most of the are rusted through, but a few still seem OK[</span><span class="substitution">end if</span><span class="quote">].</span>&quot; Understand &quot;<span class="quote">rusty/iron/nail</span>&quot; as nails.</p><p class="indent0"></p><p class="indent0">Instead of taking the rusty nails when the ladder is not broken:</p><p class="indent1">say &quot;<span class="quote">You attempt to pull [</span><span class="substitution">the rusty nails</span><span class="quote">] out of [</span><span class="substitution">the ladder</span><span class="quote">] using only your hands. Net result: nails still stuck, fingers aching.</span>&quot;</p><p class="indent1"></p><p class="indent0">Instead of pulling the rusty nails when the ladder is not broken: try taking the rusty nails.</p><p class="indent0"></p><p class="indent0">Instead of removing the rusty pair of nails with the scepter when the player is carrying the scepter:</p><p class="indent1">if the ladder is broken:</p><p class="indent2">say &quot;<span class="quote">You've already extracted the nails from the ladder.</span>&quot;;</p><p class="indent1">otherwise:</p><p class="indent2">say &quot;<span class="quote">Using the scepter as a crowbar, you pry the rusty nails from the ladder. Most of them break under the stress, but when you're done you at least have two fine, moderatly rusty nails. Oh, and you've also totally demolished the ladder.</span>&quot;;</p><p class="indent2">now the ladder is broken;</p><p class="indent2">now the player is carrying the rusty pair of nails.</p><p class="indent0"></p><p class="indent0">The steps are part of the ladder. The description is &quot;<span class="quote">Only a few steps remain intact.</span>&quot;</p><p class="indent0"></p><p class="indent0">Instead of taking the ladder: say &quot;<span class="quote">The ladder is way to unwieldy for you to carry around. Also, you might accidentally break it if you were to try moving it.</span>&quot;</p><p class="indent0"></p><p class="indent0">Instead of attacking the ladder: say &quot;<span class="quote">And how are you then planning to return to the surface world?</span>&quot;</p><p class="indent0"></p>
+</div>
+
+<div class ="notes">
+
+</div>
+
+</div>
+
+</body>
+
+</html>

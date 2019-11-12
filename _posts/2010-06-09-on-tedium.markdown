@@ -1,0 +1,13 @@
+---
+title: Motivation and Tedium
+layout: post
+published: false
+---
+
+Then I spend some time trolling [hacker news][hn], but I tend to do
+that less and less these days. There's simply not much exciting out
+there anymore. 
+
+The thing is, most programmer's blogs are mediocre. They usually just
+iterate some popular meme without any deeper understanding of it, or
+(especially in the Java space)
