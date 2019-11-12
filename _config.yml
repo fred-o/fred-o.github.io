@@ -27,6 +27,8 @@ permalink: /:year/:month/:day/:title/
 
 paginate: 10
 
+remote_theme: fongandrew/hydeout
+
 # Build settings
 markdown: kramdown
 theme: jekyll-theme-hydeout
