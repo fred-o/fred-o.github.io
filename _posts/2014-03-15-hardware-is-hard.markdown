@@ -20,7 +20,7 @@ must be something like 25 years since I last had a soldering iron in
 my hands, but putting the [T-cobbler][cobbler] together I all just
 came back to me. Even the smell was exactly as I remembered it.
 
-{% img /media/images/wired.jpg 600 %}
+![](/media/images/wired.jpg)
 
 I had some problems getting the [DHT11][dht11] sensor up and
 running. All the examples I could find had a four-legged sensor, but

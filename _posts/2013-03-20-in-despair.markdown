@@ -5,4 +5,4 @@ date: 2013-03-20 19:37
 comments: true
 categories: comic
 ---
-{% img /media/comic/in-despair-liberation.png %}
+![](/media/comic/in-despair-liberation.png)

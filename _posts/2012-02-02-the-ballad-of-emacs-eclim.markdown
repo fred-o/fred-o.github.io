@@ -36,7 +36,7 @@ that acted as a client, and then they could edit the code in vim,
 while leveraging the strengths of eclipse, such as command completion,
 compilation, and refactoring. And they called it [eclim].
 
-{% img /media/images/obscure-setup.jpg My setup is obscure %}
+![My setup is obscure](/media/images/obscure-setup.jpg)
 
 Then another [enterprising fellow][senny] ported the client libraries
 to [emacs], and the result was [emacs-eclim]. It was a bit rough at

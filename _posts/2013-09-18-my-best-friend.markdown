@@ -15,7 +15,7 @@ We took him to the summer house. This was the first time in his life
 he had been outdoors. He sat petrified beside me on the porch for
 fifteen minutes before demanding to be let in again.
 
-{% img right /media/images/jimbo1.jpg 400 Yojimbo %}
+![Yojimbo](/media/images/jimbo1.jpg)
 
 When my best friend was six months old he decided to leap out into a
 stairwell, plunging two floors and landing on concrete. I will never

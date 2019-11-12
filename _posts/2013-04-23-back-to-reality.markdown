@@ -6,7 +6,7 @@ comments: true
 categories: 
 ---
 
-{% img right /media/images/kabukicho_gate.jpg 400 The Kabukicho gate %}
+![The Kabukicho gate](/media/images/kabukicho_gate.jpg)
 
 We just got back from a two-week trip to Japan, which was simply
 _amazing_. I've seen more temples and [Torii gates][torii] than I care

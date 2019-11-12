@@ -109,7 +109,7 @@ game yourself, [without leaving your browser][play]. That's right:
 Inform7 also generates a simple website for your game, complete with a
 z-code interpreter written in javascript. 
 
-{% img right http://3.bp.blogspot.com/_j-AiRnNgy6s/TEt5OuqTwiI/AAAAAAAAASM/OA99j2FiNpw/s320/cifwi7cover-small.jpg Creating Interactive Fiction With Inform 7 %}
+![Creating Interactive Fiction With Inform 7](http://3.bp.blogspot.com/_j-AiRnNgy6s/TEt5OuqTwiI/AAAAAAAAASM/OA99j2FiNpw/s320/cifwi7cover-small.jpg)
 
 If you don't hear from me for a while, it's probably because I'm busy
 hacking my first serious game. It's taken me longer than anticipated,

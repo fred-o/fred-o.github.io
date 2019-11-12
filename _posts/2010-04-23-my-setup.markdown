@@ -32,7 +32,7 @@ no time designing and tweaking, great!
 
 Lastly, here's a picture of Yojimbo, the World's Cutest Cat:
 
-{% img http://farm2.static.flickr.com/1347/829207928_ba01bd66b3.jpg Yojimbo %}
+![Yojimbo](http://farm2.static.flickr.com/1347/829207928_ba01bd66b3.jpg)
 
 [git]:http://git-scm.com/
 [jekyll]:http://github.com/mojombo/jekyll

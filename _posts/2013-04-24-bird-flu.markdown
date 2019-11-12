@@ -5,4 +5,4 @@ date: 2013-04-24 19:30
 comments: true
 categories: comic
 ---
-{% img /media/comic/bird-flu.png %}
+![](/media/comic/bird-flu.png)

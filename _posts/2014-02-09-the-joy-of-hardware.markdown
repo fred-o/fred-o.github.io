@@ -26,13 +26,13 @@ boards, ports and capacitors. I want to learn about microcontrollers,
 I want to find out how [GPIO][gpio] works. God help me, *I want to
 solder.*
 
-{% img left /media/images/jfokus2014-1.jpg 300 %}
+![](/media/images/jfokus2014-1.jpg)
 
 Karin from [r-pi.se][rpi] had a table at the conference, and seemed to
 be doing a brisk trade. This photo was taken during a lull in traffic,
 but usually it was so crowded you couldn't even see the table. 
 
-{% img right /media/images/piface.jpg 300 %}
+![](/media/images/piface.jpg)
 
 I couldn't resist getting a [PiFace][piface] board; I've been wanting
 to add a display to my pi as I tend to run it headless and it would be

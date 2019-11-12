@@ -6,7 +6,7 @@ comments: true
 categories: [node, js, pi]
 ---
 
-{% img /media/images/helloworld.jpg 600 %}
+![](/media/images/helloworld.jpg)
 
 Since I pretty much do [node.js][node] full-time nowadays, I was
 curious if I'd be able to run it on my Pi as well. Turns out that's no

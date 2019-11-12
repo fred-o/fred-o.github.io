@@ -9,7 +9,7 @@ netbooks look cumbersome and unwieldy.
 
 ### I mean, just look at the thing
 
-{% img /media/images/nanonote.jpg My nanonote, dwarfed by the iMac. %}
+![My nanonote, dwarfed by the iMac.](/media/images/nanonote.jpg)
 
 ### Not for everyone, though
 

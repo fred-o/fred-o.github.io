@@ -12,7 +12,7 @@ naked sensor soldered straight onto the board and one on a waterproof
 cable that I've hung out the window. This lets me measure current
 indoor and outdoor temperature.
 
-{% img /media/images/prototypeboard.jpg 600 %}
+![](/media/images/prototypeboard.jpg)
 
 The board is connected to my Raspberry Pi, where a [node.js][node]
 program using [sensorjs][sensorjs] is regularly sending the sensor

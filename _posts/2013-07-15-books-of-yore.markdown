@@ -6,7 +6,7 @@ comments: true
 categories: 
 ---
 
-{% img right /media/images/books.jpg 200 %}
+![](/media/images/books.jpg)
 
 I'm cleaning out a lot of old rubbish from my office; I need the
 space. These books are all going to the recycling plant unless I find

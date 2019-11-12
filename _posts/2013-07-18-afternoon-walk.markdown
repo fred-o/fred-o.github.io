@@ -6,7 +6,7 @@ comments: true
 categories:
 ---
 
-{% img /media/images/walk.jpg 600 %}
+![](/media/images/walk.jpg)
 
 One of the nice things about working from home and living out in the
 sticks is that when you're done for the day you take a walk around the

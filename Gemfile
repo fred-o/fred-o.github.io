@@ -22,9 +22,6 @@ gem "jekyll-theme-hydeout"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
-  gem 'octopress-image-tag'
-  # gem 'octopress-codeblock'
-  # gem 'octopress-codefence'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
