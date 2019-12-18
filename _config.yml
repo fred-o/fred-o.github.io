@@ -31,7 +31,7 @@ remote_theme: fongandrew/hydeout
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-hydeout
+# theme: jekyll-theme-hydeout
 plugins:
   - jekyll-feed
 
