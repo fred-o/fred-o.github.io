@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Quering MS SQL from Babel
+title:  Querying MS SQL from Babel
 date:   2020-07-14 14:21:57 +0200
 category: [emacs, org-mode]
 ---
